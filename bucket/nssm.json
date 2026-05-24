@@ -1,0 +1,30 @@
+{
+    "version": "3.0.0",
+    "description": "NSSM is a service manager for Windows",
+    "homepage": "https://github.com/fightroad/nssm",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/fightroad/nssm/releases/download/v3.0.0/nssm-win64-Release.zip",
+            "hash": "sha256:6d2aecc98dccea2a502bc74feebc4f05fa78b0ca15d5741c0a42c8fb1dcc3bd6"
+        },
+        "32bit": {
+            "url": "https://github.com/fightroad/nssm/releases/download/v3.0.0/nssm-win32-Release.zip",
+            "hash": "sha256:d82453b99f33f463e9105e3ec7d7f803f527a2a3dda79a983cf0bfa599432bf1"
+        }
+    },
+    "bin": "nssm.exe",
+    "checkver": {
+        "github": "fightroad/nssm"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/fightroad/nssm/releases/download/v$version/nssm-win64-Release.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/fightroad/nssm/releases/download/v$version/nssm-win32-Release.zip"
+            }
+        }
+    }
+}
